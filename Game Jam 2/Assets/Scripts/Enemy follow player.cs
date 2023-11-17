@@ -5,6 +5,7 @@ using UnityEngine;
 public class Enemyfollowplayer : MonoBehaviour
 {
     public Transform target;
+    public float speed = 3f ;
     public float rotate_speed = 0.003f ;
     private Rigidbody2D rb;
 
