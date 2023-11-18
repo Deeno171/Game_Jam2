@@ -28,7 +28,7 @@ public class Enemyfollowplayer : MonoBehaviour
 
     void FixedUpdate()
     {
-
+        rb.velocity = transform.up * speed;
     }
 
     void RotateTowardsTarget()
@@ -41,9 +41,17 @@ public class Enemyfollowplayer : MonoBehaviour
 
     void GetTarget()
     {
-        target = GameObject.FindGameObjectWithTag("player").transform;
+        target = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
+    void OnCollissionEnter2D(Collision2D other)
+    {
+        if(other.gameObject.CompareTag("Player"))
+        {
+            Destroy(other.gameObject);
+            target = null;
+        }
+    }
 
 }
 
