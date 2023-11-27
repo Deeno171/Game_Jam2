@@ -1,4 +1,4 @@
-using System.Collections;
+ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -9,17 +9,17 @@ public class bullet : MonoBehaviour
     [SerializeField] private float speed = 10f;
 
     [Range(1,10)]
-    [SerializeField] private float lt = 3f;
+    [SerializeField] private float lifeTime = 3f;
 
     private Rigidbody2D rb;
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        Destroy(gameObject, lt);
+        Destroy(gameObject, lifeTime);
     }
-
+ 
     // Update is called once per frame
-    void Update()
+    private void FixedUpdate()
     {
         rb.velocity = transform.up * speed;
         
