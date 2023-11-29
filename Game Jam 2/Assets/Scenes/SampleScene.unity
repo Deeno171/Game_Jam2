@@ -233,6 +233,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+  bulletPrefab: {fileID: 1392056344}
+  firingPoint: {fileID: 1145575514}
+  fireRate: 0.5
 --- !u!58 &470643463
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -502,7 +505,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.025, y: 0.418, z: -100}
+  m_LocalPosition: {x: -0.025, y: 0.42, z: -100}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -534,7 +537,6 @@ GameObject:
   - component: {fileID: 802164236}
   - component: {fileID: 802164237}
   - component: {fileID: 802164238}
-  - component: {fileID: 802164239}
   m_Layer: 0
   m_Name: 9-Sliced
   m_TagString: Untagged
@@ -654,27 +656,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!95 &802164239
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 802164235}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 31390d9b920c2416abf4543eadfdfc81, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &975363021
 GameObject:
   m_ObjectHideFlags: 0
@@ -805,6 +786,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!4 &1145575514 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5112964719995463463, guid: 552e589fbe79c423c8bcae05f3e43b18, type: 3}
+  m_PrefabInstance: {fileID: 4355291059817934325}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1186318975
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1130,6 +1116,11 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!1 &1392056344 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 298193404279417960, guid: ddd25f4cbffca440299ce8e3befca850, type: 3}
+  m_PrefabInstance: {fileID: 2138625535269267946}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1957140866
 GameObject:
   m_ObjectHideFlags: 0
