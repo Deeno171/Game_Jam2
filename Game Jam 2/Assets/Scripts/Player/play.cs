@@ -34,7 +34,7 @@ public class Player : MonoBehaviour
         rb.velocity = new Vector2(mx, my).normalized * speed;
 
         // Check if the current time is greater than the next allowed fire time
-        if (Input.GetKeyDown(KeyCode.E) && fireTimer <= 0f)
+        if (Input.GetMouseButtonDown(0) && fireTimer <= 0f)
         {
             Shoot();
             fireTimer = fireRate;
